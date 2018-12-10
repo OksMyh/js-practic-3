@@ -21,9 +21,25 @@
 
 // second method
 
+// function generateTable(row,cell,element) {
+//     let table = document.createElement('table');
+//     element.appendChild(table);
+//     for (let i=0;i<row;i++){
+//         let newRow = table.insertRow();
+//         for (let j=0;j<cell;j++){
+//             newRow.insertCell();
+//         }
+//     }
+//
+// }
+// generateTable(8,3,document.getElementsByTagName('div')[0]);
+
+//third method
+
 function generateTable(row,cell,element) {
     let table = document.createElement('table');
-    element.appendChild(table);
+    document.body.appendChild(element);
+    element.insertBefore(table,null);
     for (let i=0;i<row;i++){
         let newRow = table.insertRow();
         for (let j=0;j<cell;j++){
@@ -32,4 +48,4 @@ function generateTable(row,cell,element) {
     }
 
 }
-generateTable(8,3,document.getElementsByTagName('div')[0]);
+generateTable(8,3,document.createElement('p'));
